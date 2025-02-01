@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>Kelas</title>
+		
+			<style>
+				/* Body Untuk Halaman */
+				body { 
+				margin: 0;
+				padding: 0;
+				font-family: Arial, sans-serif;
+				overflow: hidden; /* Mencegah scroll saat animasi */
+				background-color: #cc4a7c; /* latar Ungu */ 
+				}
+				
+			.container {
+				position: relative;
+				width: 100%;
+				height: 100vh; 
+				}
+				
+				/* Animation Kelas */
+			.title {
+				font-size: 50px;
+				font-weight: bold;
+				color: black;
+				margin-top: 80px;
+				margin-left: 170px;
+				position: absolute;
+				top: -80px; 
+				left: 20px; 
+				animation: slideDown 2s forwards; /*Untuk animasi turun*/ 
+				}
+				
+			@keyframes slideDown {
+				to { top: 20px; /* Posisi akhir */ 
+				}
+			}	
+			
+			
+			/* About Bintang */
+			
+			.star {
+				width: 150px;
+				height: 150px;
+				background-color: yellow;
+				clip-path: polygon(
+					51% 0%, 60% 35%,  98% 35%, 
+					68% 57%, 79% 91%, 50% 70%, 
+					21% 91%, 32% 57%, 2% 35%, 
+					39% 35%
+				);
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 30px;
+				font-weight: bold;
+				}
+				
+				/* Bintang ke 1 (kiri ke kanan) */
+				
+				.star1 {
+					top: 45%;
+					left: -160px;
+					transform: rotate(15deg);
+					animation: moveRight 2s forwards; }
+					
+		        @keyframes moveRight {
+					to { left: 30%; /* Posisi akhir */ }			
+				}
+				
+				
+				
+				/* Bintang ke 2 (bawah ke atas) */
+				
+				.star2 {
+					left: 50%;
+					bottom: -250px;
+					transform: translateX(-50%);
+					animation: moveUp 2s forwards; }
+					
+		        @keyframes moveUp {
+					to { bottom: 30%; /* Posisi akhir */ 
+					}			
+				}
+				
+				
+				
+				/* Bintang ke 3 (kanan ke kiri) */
+				
+				.star3 {
+					top: 45%;
+					right: -160px;
+					transform: rotate(-15deg);
+					animation: moveLeft 2s forwards; }
+					
+		        @keyframes moveLeft {
+					to { right: 30%; /* Posisi akhir */ 
+					}			
+				}	
+				
+			</style>
+	</head>		
+			
+		<body>
+		<div class="container">
+        <!-- Teks "Kelas" -->
+        <div class="title">Kelas</div>
+
+        <!-- Bintang 1 -->
+        <div class="star star1">1</div>
+
+        <!-- Bintang 2 -->
+        <div class="star star2">2</div>
+
+        <!-- Bintang 3 -->
+        <div class="star star3">3</div>
+	</div>
+		</body>
+</html>
